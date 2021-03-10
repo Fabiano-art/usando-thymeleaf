@@ -24,6 +24,11 @@ public class PopularDados {
 		
 		ps.save(ps1);
 		ps.save(ps2);
+		ps.save(ps1);
+		ps.save(ps2);
+		ps.save(ps1);
+		ps.save(ps2);
+		
 	}
 
 }
