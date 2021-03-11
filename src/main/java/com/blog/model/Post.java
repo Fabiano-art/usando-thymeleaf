@@ -9,9 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sun.istack.NotNull;
 
 
 @Entity
@@ -22,21 +22,22 @@ public class Post {
 	@GeneratedValue(strategy = GenerationType.AUTO) 
 	private Long id;
 	
+	@Column( nullable = false)
 	@NotNull
-	@Column( nullable = false )
 	private String titulo;
 	
-	@NotNull
 	@Column( nullable = false )
+	@NotNull
 	private String autor;
 	
-	@NotNull
 	@Column( nullable = false )
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
+	@NotNull
 	private LocalDate data;
 	
 	@Lob
 	@Column( nullable = false )
+	@NotNull
 	private String texto;
 	
 	public Post() {}

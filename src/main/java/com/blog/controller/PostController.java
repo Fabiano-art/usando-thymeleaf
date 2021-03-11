@@ -46,6 +46,7 @@ public class PostController {
 	@PostMapping("/newPost")
 	public String savePost(@Validated Post post, BindingResult result, RedirectAttributes attributes) {
 		if(result.hasErrors()) {
+			attributes.addFlashAttribute("mensagem", "Verifique se os campos estão todos preenchidos e tente novamente");
 			return "redirect:/newPost";
 		}
 		else {
