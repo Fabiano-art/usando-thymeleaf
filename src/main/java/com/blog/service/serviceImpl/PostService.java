@@ -28,5 +28,5 @@ public class PostService implements Service{
 	public Post save(Post post) {
 		return pr.save(post);
 	}
-
+	
 }
